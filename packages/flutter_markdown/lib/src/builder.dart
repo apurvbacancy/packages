@@ -823,12 +823,14 @@ class MarkdownBuilder implements md.NodeVisitor {
         key: k,
       );
     } else {
-      return RichText(
-        maxLines: 2,
-        text: text!,
-        textScaleFactor: styleSheet.textScaleFactor!,
-        textAlign: textAlign ?? TextAlign.start,
-        key: k,
+      return InkWell(
+        onTap: (){},
+        child: RichText(
+          text: text!,
+          textScaleFactor: styleSheet.textScaleFactor!,
+          textAlign: textAlign ?? TextAlign.start,
+          key: k,
+        ),
       );
     }
   }
