@@ -824,7 +824,7 @@ class MarkdownBuilder implements md.NodeVisitor {
       );
     } else {
       return RichText(
-        semanticsLabel: "messageText",
+        maxLines: 2,
         text: text!,
         textScaleFactor: styleSheet.textScaleFactor!,
         textAlign: textAlign ?? TextAlign.start,
